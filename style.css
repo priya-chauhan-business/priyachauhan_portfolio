@@ -211,6 +211,28 @@ html {
 #experience ul li {
   margin-bottom: 8px;
 }
+.skills-category {
+  margin-bottom: 30px;
+}
+
+.skills-category h4 {
+  color: #003366;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.skills-category ul {
+  list-style: disc;
+  padding-left: 20px;
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.skills-category ul li {
+  margin-bottom: 6px;
+}
+
 
 
 
