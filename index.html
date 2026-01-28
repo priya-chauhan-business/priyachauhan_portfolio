@@ -150,39 +150,54 @@
     <p>© 2026 Priya Chauhan | UK Professional Portfolio</p>
   </footer>
 
-  <!-- AOS SCRIPT -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+  <!-- AOS Animation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 
-  <!-- NAVIGATION LOGIC -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const navLinks = document.querySelectorAll("nav a");
-      const content = document.getElementById("content");
+<!-- SECTION CONTROL SCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
 
-      navLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
+    const navLinks = document.querySelectorAll("nav a");
+    
+    const sections = {
+      profile: document.getElementById("profile"),
+      experience: document.getElementById("experience"),
+      projects: document.getElementById("projects"),
+      skills: document.getElementById("skills"),
+      education: document.getElementById("education"),
+      certifications: document.getElementById("certifications"),
+      contact: document.getElementById("contact")
+    };
 
-          const targetId = this.getAttribute("href").substring(1);
-          const targetSection = document.getElementById(targetId);
+    function hideAllSections() {
+      Object.values(sections).forEach(sec => {
+        sec.style.display = "none";
+      });
+    }
 
-          if (targetId !== "profile") {
-            content.style.display = "block";
-          }
+    // Show profile only on page load
+    hideAllSections();
+    sections.profile.style.display = "block";
 
-          setTimeout(() => {
-            targetSection.scrollIntoView({ behavior: "smooth" });
-          }, 200);
-        });
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        hideAllSections();
+        sections[targetId].style.display = "block";
+
+        setTimeout(() => {
+          sections[targetId].scrollIntoView({ behavior: "smooth" });
+        }, 100);
       });
     });
-  </script>
+  });
+</script>
 
 </body>
-</html>
