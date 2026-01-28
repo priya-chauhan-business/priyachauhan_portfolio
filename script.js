@@ -1,25 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll("nav a");
-  const content = document.getElementById("content");
-
-  links.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute("href").slice(1);
-      const targetSection = document.getElementById(targetId);
-
-      // Show hidden content div if not visible
-      if (content.style.display === "none") {
-        content.style.display = "block";
-        AOS.init(); // Re-initialize animations after showing
-      }
-
-      // Scroll to the target section
-      setTimeout(() => {
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      }, 200);
-    });
-  });
+// ============================
+// Navbar: Transparent → Solid
+// ============================
+window.addEventListener("scroll", function () {
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > 80) {
+    navbar.classList.add("solid");
+  } else {
+    navbar.classList.remove("solid");
+  }
 });
 
+// ============================
+// Smooth Active Nav Indicator
+// ============================
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 200;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+});
