@@ -12,112 +12,111 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #0d0f14;
-  color: #e3e6ee;
-  line-height: 1.8;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0a0f2f;
+  color: #e9ecef;
+  line-height: 1.7;
 }
 
 /* =========================
    NAVIGATION
 ========================= */
 nav {
-  background: #0b0d12;
-  padding: 15px 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 15px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  backdrop-filter: blur(8px);
+  background: transparent;
+}
+
+nav.solid {
+  background: rgba(10, 15, 47, 0.95);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5);
 }
 
 nav .logo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 26px;
-  font-weight: 600;
-  color: #00c8ff;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #00a8ff;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 12px;
+  gap: 16px;
 }
 
 nav a {
   text-decoration: none;
-  color: #e3e6ee;
+  color: #e9ecef;
+  font-size: 16px;
   font-weight: 600;
-  padding: 10px 16px;
-  border-radius: 30px;
-  background-color: #121820;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-nav a i {
-  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #00c8ff;
-  color: #0d0f14;
-  transform: translateY(-2px);
+  background: #00a8ff;
+  color: #0a0f2f;
 }
 
 /* =========================
-   HERO (LANDING)
+   HERO / LANDING
 ========================= */
-.hero-section {
-  background: linear-gradient(135deg, #11151d, #0e131b);
-  padding: 100px 40px;
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #0a0f2f, #09102b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 0 20px;
 }
 
-.hero-container {
-  max-width: 900px;
-  margin: auto;
-}
-
-.hero-image img {
+.hero-img {
   width: 180px;
   height: 180px;
-  object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #00c8ff;
+  border: 4px solid #00a8ff;
+  box-shadow: 0 4px 25px rgba(0,168,255,0.5);
+  object-fit: cover;
   margin-bottom: 20px;
-  box-shadow: 0 4px 20px rgba(0,200,255,0.4);
 }
 
-.hero-section h1 {
-  font-family: 'Montserrat', sans-serif;
+.hero h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #00c8ff;
-  margin-bottom: 12px;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 
-.hero-tagline {
+.hero p {
   font-size: 18px;
-  color: #cfd3da;
+  color: #ced4da;
   margin-bottom: 20px;
 }
 
-.hero-button {
-  text-decoration: none;
-  background: #00c8ff;
-  color: #0d0f14;
-  padding: 12px 28px;
+.hero .button {
+  background: #00a8ff;
+  color: #0a0f2f;
+  padding: 12px 26px;
   border-radius: 30px;
   font-weight: 700;
+  text-decoration: none;
   transition: transform 0.3s ease;
 }
 
-.hero-button:hover {
-  transform: translateY(-3px);
+.hero .button:hover {
+  transform: translateY(-4px);
   background: #007acc;
   color: #ffffff;
 }
@@ -126,87 +125,66 @@ nav a:hover {
    SECTIONS
 ========================= */
 .section {
-  padding: 80px 35px;
-  max-width: 1000px;
-  margin: 40px auto;
-  background-color: #121828;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+  padding: 80px 5%;
+  max-width: 1100px;
+  margin: 60px auto;
+  background: #0d1440;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  transition: background 0.3s ease;
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: #00c8ff;
+  font-family: 'Playfair Display', serif;
   font-size: 30px;
-  margin-bottom: 18px;
-  border-bottom: 2px solid #00c8ff;
+  color: #00a8ff;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00a8ff;
   display: inline-block;
   padding-bottom: 6px;
 }
 
-/* =========================
-   GENERIC LISTS
-========================= */
-.list-simple {
-  margin-top: 15px;
-  padding-left: 24px;
-}
-
-.list-simple li {
-  margin-bottom: 10px;
-  color: #d1d5db;
-}
-
-.list-simple li::marker {
-  color: #00c8ff;
-}
-
-/* =========================
-   EXPERIENCE CARDS
-========================= */
-.exp-card {
-  background: #0f131c;
-  padding: 20px 22px;
-  margin-bottom: 22px;
-  border-left: 4px solid #00c8ff;
-  border-radius: 8px;
-}
-
-.exp-card h3 {
-  color: #00c8ff;
+h4 {
   font-size: 20px;
+  margin-top: 12px;
+  color: #b8d7ff;
+}
+
+/* Lists */
+ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+ul li {
   margin-bottom: 8px;
+  color: #d1d5db;
+  font-size: 16px;
+}
+
+ul li::marker {
+  color: #00a8ff;
+}
+
+/* Experience Cards */
+.exp-card {
+  background: #0b1236;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  border-left: 4px solid #00a8ff;
+  border-radius: 8px;
 }
 
 .exp-duration {
   font-size: 15px;
-  color: #9dbad8;
+  color: #9bbbe0;
   margin-bottom: 10px;
 }
 
-/* =========================
-   SKILLS SECTIONS
-========================= */
-.skills-group {
-  margin-bottom: 28px;
-}
-
-.skills-group h4 {
-  color: #9adfff;
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-.contact a {
-  color: #00c8ff;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
+/* Projects & Skills */
+.list-simple {
+  margin-top: 15px;
+  padding-left: 24px;
 }
 
 /* =========================
@@ -214,10 +192,11 @@ h2 {
 ========================= */
 footer {
   text-align: center;
-  padding: 25px;
-  background: #0b0d12;
-  color: #9ca3af;
-  margin-top: 60px;
+  padding: 20px 0;
+  background: #09102b;
+  color: #9aa7bb;
+  margin-top: 50px;
+  font-size: 14px;
 }
 
 /* =========================
@@ -225,39 +204,25 @@ footer {
 ========================= */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
+    padding: 15px 3%;
   }
-
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
   }
-
-  .section {
-    padding: 60px 20px;
+  .hero h1 {
+    font-size: 32px;
   }
-
-  .list-simple {
-    padding-left: 18px;
-  }
-
-  .skills-group ul {
-    columns: 1;
+  .hero p {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-section {
-    padding: 70px 15px;
-  }
-
-  .hero-image img {
+  .hero-img {
     width: 150px;
     height: 150px;
   }
-
   h2 {
     font-size: 26px;
   }
