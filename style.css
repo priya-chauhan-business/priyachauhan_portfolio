@@ -202,6 +202,16 @@ html {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+#experience ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+#experience ul li {
+  margin-bottom: 8px;
+}
+
 
 
 
