@@ -142,3 +142,46 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+/* Responsive Layout */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  #profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  ul.two-column {
+    columns: 1;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .profile-info h1 {
+    font-size: 26px;
+  }
+
+  nav .logo {
+    font-size: 20px;
+  }
+}
+
