@@ -188,6 +188,57 @@ ul li::marker {
 }
 
 /* =========================
+   CONTACT SECTION
+========================= */
+
+/* Ensure contact links (email and LinkedIn) are white */
+.contact p a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Form Styles */
+.contact form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 6px;
+  background-color: #0b1236;
+  border: 1px solid #2e3a5d;
+  color: #e9ecef;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #aac6fc;
+}
+
+.contact .button {
+  background: #00a8ff;
+  color: #0a0f2f;
+  border: none;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact .button:hover {
+  background: #007acc;
+  color: #ffffff;
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {
