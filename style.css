@@ -278,3 +278,13 @@ footer {
     font-size: 26px;
   }
 }
+/* Smooth section fade */
+section {
+  transition: opacity 0.4s ease;
+}
+
+/* Active nav link style */
+nav a.active {
+  background: #00a8ff;
+  color: #0a0f2f;
+}
