@@ -19,20 +19,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function hideAllSections() {
     sections.forEach(section => {
-      section.style.opacity = 0;
-      section.style.pointerEvents = "none";
-      section.style.position = "absolute";
+      section.style.display = "none";
     });
   }
 
   function showSection(id) {
-    const target = document.getElementById(id);
-    if (target) {
-      hideAllSections();
-      target.style.opacity = 1;
-      target.style.pointerEvents = "auto";
-      target.style.position = "relative";
-      target.scrollIntoView({ behavior: "smooth" });
+    hideAllSections();
+    const section = document.getElementById(id);
+    if (section) {
+      section.style.display = "block";
+      section.scrollIntoView({ behavior: "smooth" });
     }
   }
 
@@ -45,12 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Initial state
+  // Initial state: show 'hero' section only
   hideAllSections();
-  showSection("profile");
-  setActiveLink("profile");
+  document.getElementById("hero").style.display = "block";
 
-  // Nav link click event
+  // Nav click logic
   navLinks.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
