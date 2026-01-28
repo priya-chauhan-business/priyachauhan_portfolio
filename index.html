@@ -18,18 +18,44 @@
 <body>
 
   <!-- NAVIGATION -->
-  <nav>
-    <div class="logo">Priya Chauhan</div>
-    <ul>
-      <li><a href="#profile">Profile</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("nav a");
+    const sections = {
+      profile: document.getElementById("profile"),
+      experience: document.getElementById("experience"),
+      projects: document.getElementById("projects"),
+      skills: document.getElementById("skills"),
+      education: document.getElementById("education"),
+      certifications: document.getElementById("certifications"),
+      contact: document.getElementById("contact")
+    };
+
+    function hideAllSections() {
+      for (const section of Object.values(sections)) {
+        if (section) {
+          section.style.display = "none";
+        }
+      }
+    }
+
+    // Show profile by default
+    hideAllSections();
+    if (sections.profile) sections.profile.style.display = "block";
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        hideAllSections();
+        if (sections[targetId]) {
+          sections[targetId].style.display = "block";
+          sections[targetId].scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  });
+</script>
 
   <!-- PROFILE -->
   <section id="profile" class="section" data-aos="fade-up">
