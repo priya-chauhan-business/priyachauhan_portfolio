@@ -12,30 +12,30 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0f1115;
-  color: #e4e6eb;
-  line-height: 1.7;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0d0f14;
+  color: #e3e6ee;
+  line-height: 1.8;
 }
 
 /* =========================
-   NAVIGATION (PILL STYLE)
+   NAVIGATION
 ========================= */
 nav {
-  background: linear-gradient(90deg, #05070c, #0b1220);
-  padding: 16px 60px;
+  background: #0b0d12;
+  padding: 15px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
 }
 
 nav .logo {
-  font-family: 'Cinzel', serif;
-  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
   font-weight: 600;
   color: #00c8ff;
 }
@@ -48,175 +48,153 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #e4e6eb;
+  color: #e3e6ee;
   font-weight: 600;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 30px;
-  border: 1px solid #1f2937;
-  background-color: #121826;
+  background-color: #121820;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+nav a i {
+  font-size: 14px;
 }
 
 nav a:hover {
-  background: #00c8ff;
-  color: #0f1115;
+  background-color: #00c8ff;
+  color: #0d0f14;
   transform: translateY(-2px);
 }
 
 /* =========================
-   SECTIONS (CARD STYLE)
+   HERO (LANDING)
 ========================= */
-.section {
-  padding: 80px 40px;
-  max-width: 1100px;
-  margin: 40px auto;
-  background: #121826;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+.hero-section {
+  background: linear-gradient(135deg, #11151d, #0e131b);
+  padding: 100px 40px;
+  text-align: center;
 }
 
-/* Headings */
-h1, h2, h3, h4 {
-  font-family: 'Cinzel', serif;
+.hero-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00c8ff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,200,255,0.4);
+}
+
+.hero-section h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
   color: #00c8ff;
+  margin-bottom: 12px;
 }
 
-h1 {
-  font-size: 34px;
+.hero-tagline {
+  font-size: 18px;
+  color: #cfd3da;
   margin-bottom: 20px;
 }
 
+.hero-button {
+  text-decoration: none;
+  background: #00c8ff;
+  color: #0d0f14;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-3px);
+  background: #007acc;
+  color: #ffffff;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  padding: 80px 35px;
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: #121828;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+}
+
 h2 {
-  font-size: 28px;
-  margin-bottom: 25px;
+  font-family: 'Montserrat', sans-serif;
+  color: #00c8ff;
+  font-size: 30px;
+  margin-bottom: 18px;
   border-bottom: 2px solid #00c8ff;
   display: inline-block;
   padding-bottom: 6px;
 }
 
-h3 {
-  font-size: 22px;
-  margin-top: 30px;
-}
-
-h4 {
-  font-size: 18px;
-  margin-top: 20px;
-}
-
 /* =========================
-   PROFILE
+   GENERIC LISTS
 ========================= */
-#profile {
-  text-align: left;
-}
-
-.profile-image img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #00c8ff;
-  box-shadow: 0 0 20px rgba(0,200,255,0.4);
-}
-
-.profile-info .title {
-  font-size: 20px;
-  color: #9adfff;
-  margin-bottom: 15px;
-}
-
-.profile-info .summary {
-  font-size: 16px;
-  color: #cfd3da;
-  max-width: 800px;
-  margin-bottom: 20px;
-}
-
-/* =========================
-   LISTS
-========================= */
-ul {
+.list-simple {
   margin-top: 15px;
-  padding-left: 20px;
+  padding-left: 24px;
 }
 
-ul li {
-  margin-bottom: 8px;
+.list-simple li {
+  margin-bottom: 10px;
   color: #d1d5db;
 }
 
-ul li::marker {
+.list-simple li::marker {
   color: #00c8ff;
 }
 
 /* =========================
-   EXPERIENCE HIGHLIGHT
+   EXPERIENCE CARDS
 ========================= */
-.highlight {
-  background: linear-gradient(135deg, #0b1c2d, #081420);
-  padding: 25px;
-  border-left: 5px solid #00c8ff;
-  border-radius: 10px;
-  margin-bottom: 25px;
+.exp-card {
+  background: #0f131c;
+  padding: 20px 22px;
+  margin-bottom: 22px;
+  border-left: 4px solid #00c8ff;
+  border-radius: 8px;
 }
 
-/* =========================
-   SKILLS
-========================= */
-.skills-category {
-  margin-bottom: 35px;
+.exp-card h3 {
+  color: #00c8ff;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
-.skills-category h4 {
-  color: #9adfff;
-}
-
-.skills-category ul {
-  column-count: 2;
-  column-gap: 50px;
-}
-
-/* =========================
-   CERTIFICATIONS
-========================= */
-.cert-item {
-  margin-bottom: 25px;
-}
-
-.cert-item h4 {
-  color: #9adfff;
-}
-
-.cert-item p {
+.exp-duration {
   font-size: 15px;
-  color: #cfd3da;
-  line-height: 1.6;
-}
-
-.section-intro {
-  font-size: 16px;
-  color: #d1d5db;
-  margin-bottom: 25px;
+  color: #9dbad8;
+  margin-bottom: 10px;
 }
 
 /* =========================
-   BUTTONS
+   SKILLS SECTIONS
 ========================= */
-.button {
-  display: inline-block;
-  background: linear-gradient(135deg, #00c8ff, #007acc);
-  color: #0f1115;
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
+.skills-group {
+  margin-bottom: 28px;
 }
 
-.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0,200,255,0.5);
+.skills-group h4 {
+  color: #9adfff;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 /* =========================
@@ -237,7 +215,7 @@ ul li::marker {
 footer {
   text-align: center;
   padding: 25px;
-  background: #05070c;
+  background: #0b0d12;
   color: #9ca3af;
   margin-top: 60px;
 }
@@ -248,30 +226,39 @@ footer {
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: flex-start;
     gap: 15px;
     padding: 20px;
   }
 
   nav ul {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .section {
-    padding: 50px 25px;
+    padding: 60px 20px;
   }
 
-  .skills-category ul {
-    column-count: 1;
+  .list-simple {
+    padding-left: 18px;
+  }
+
+  .skills-group ul {
+    columns: 1;
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 28px;
+  .hero-section {
+    padding: 70px 15px;
+  }
+
+  .hero-image img {
+    width: 150px;
+    height: 150px;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
