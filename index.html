@@ -8,11 +8,18 @@
   <title>Priya Chauhan | Business & Digital Marketing Analyst</title>
   <meta name="description" content="Portfolio of Priya Chauhan – strategic Business & Digital Marketing Analyst with expertise in analytics, growth, SEO and performance optimisation.">
   <meta name="author" content="Priya Chauhan">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Dark Theme CSS -->
+  <link rel="stylesheet" href="style-dark.css" />
 </head>
 
 <body>
@@ -21,16 +28,18 @@
   <nav>
     <div class="logo">Priya Chauhan</div>
     <ul>
-      <li><a href="#profile">Profile</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#profile"><i class="fa-solid fa-user"></i> Profile</a></li>
+      <li><a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+      <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+      <li><a href="#skills"><i class="fa-solid fa-brain"></i> Skills</a></li>
+      <li><a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#certifications"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+      <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
 
+  <!-- CONTENT SECTIONS -->
+  
   <!-- PROFILE -->
   <section id="profile" class="section" data-aos="fade-up">
     <h1>The Intersection of Data & Growth</h1>
@@ -55,25 +64,25 @@
     <h4>Digital Desk Manager & Business Analyst</h4>
     <p><em>Maruti Suzuki Dealership | Feb 2020 – Aug 2025</em></p>
     <ul>
-      <li>Led full-scale digital operations and managed social & hyperlocal channels to increase showroom footfall.</li>
+      <li>Led full-scale digital operations and managed social & hyperlocal channels.</li>
       <li>Boosted Lead Generation by <strong>25%</strong>, Marketing ROI by <strong>20%</strong>, and Conversion by <strong>15%</strong>.</li>
-      <li>Built performance dashboards tracking 20+ KPIs for senior leadership using Power BI & Looker.</li>
-      <li>Owned end-to-end website strategy to improve SEO and customer journey flows.</li>
+      <li>Built dashboards tracking 20+ KPIs for senior leadership using Power BI & Looker.</li>
+      <li>Owned end-to-end website strategy improving SEO & visitor experience.</li>
     </ul>
 
     <h4>Associate Analyst – Marketing & Operations</h4>
     <p><em>Maruti Suzuki Dealership | Apr 2018 – Jan 2020</em></p>
     <ul>
-      <li>Streamlined administrative operations by <strong>30%</strong> using Jira and scheduling tools.</li>
+      <li>Streamlined operations by <strong>30%</strong> using Jira and scheduling tools.</li>
       <li>Analysed customer behaviour to refine service experiences.</li>
-      <li>Optimised inventory to cut excess stock by <strong>30%</strong> and delivery wait times.</li>
+      <li>Optimised inventory, reducing excess stock by <strong>30%</strong>.</li>
     </ul>
 
     <h4>Management Trainee</h4>
     <p><em>Standard Auto Agencies | Nov 2017 – Mar 2018</em></p>
     <ul>
-      <li>Revamped customer inquiry systems with CRM automation, improving satisfaction.</li>
-      <li>Liaised between IT and business stakeholders to document requirements in JIRA.</li>
+      <li>Revamped customer inquiry systems with CRM automation.</li>
+      <li>Liaised between IT & business stakeholders to document in JIRA.</li>
     </ul>
   </section>
 
@@ -125,7 +134,7 @@
   <section id="education" class="section" data-aos="fade-up">
     <h2>🎓 Education</h2>
     <ul>
-      <li>Master of Research (MRes) – AI in Business | University of Hertfordshire, UK (In Pursuit)</li>
+      <li>Master of Research (MRes) – AI in Business | University of Hertfordshire, UK</li>
       <li>M.Eng in Industrial Engineering & Management | RGPV, India</li>
       <li>B.Tech in Mechanical Engineering | JNTUH, India</li>
     </ul>
@@ -163,13 +172,14 @@
     <p>© 2026 Priya Chauhan | UK Professional Portfolio</p>
   </footer>
 
-
-  <!-- SCRIPTS -->
+  
+  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1200, once: true });
   </script>
 
+  <!-- Navigation Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const links = document.querySelectorAll("nav a");
@@ -179,7 +189,6 @@
         sections.forEach(section => section.style.display = "none");
       }
 
-      // Show profile by default
       hideAll();
       document.getElementById("profile").style.display = "block";
 
