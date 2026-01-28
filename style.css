@@ -127,7 +127,8 @@ ul.two-column {
   gap: 15px;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -142,6 +143,7 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
 /* Responsive Layout */
 @media (max-width: 768px) {
   nav {
@@ -184,9 +186,13 @@ footer {
     font-size: 20px;
   }
 }
+
+/* Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
+
+/* Profile Section Enhancements */
 .profile-info .title {
   font-size: 20px;
   font-weight: 500;
@@ -202,6 +208,8 @@ html {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+
+/* Experience */
 #experience ul {
   margin-top: 10px;
   padding-left: 20px;
@@ -211,6 +219,8 @@ html {
 #experience ul li {
   margin-bottom: 8px;
 }
+
+/* Skills Section */
 .skills-category {
   margin-bottom: 30px;
 }
@@ -233,7 +243,26 @@ html {
   margin-bottom: 6px;
 }
 
+/* Certifications & Affiliations */
+.cert-item {
+  margin-bottom: 25px;
+}
 
+.cert-item h4 {
+  color: #003366;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
 
+.cert-item p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
 
-
+.section-intro {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #222;
+  line-height: 1.6;
+}
