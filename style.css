@@ -265,19 +265,120 @@ h4 {
 /* =========================
    CONTACT & FOOTER
 ========================= */
-.contact p a {
+
+/* --- Contact Section --- */
+.contact-section {
+  padding: 60px 20px;
+  background: #1f1f1f;
   color: white;
-  text-decoration: underline;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.contact-section p strong {
+  color: #00bfff;
+}
+
+.contact-section p a {
+  color: #00bfff;
+  text-decoration: none;
   font-weight: 600;
 }
 
+.contact-section p a:hover {
+  text-decoration: underline;
+}
+
+/* --- Contact Form --- */
+.styled-contact-form {
+  max-width: 600px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.styled-contact-form .icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1rem;
+}
+
+.styled-contact-form input,
+.styled-contact-form textarea {
+  width: 100%;
+  padding: 14px 15px 14px 42px;
+  background: #2e2e2e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #eee;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.styled-contact-form input:focus,
+.styled-contact-form textarea:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 5px rgba(0, 191, 255, 0.4);
+}
+
+.styled-contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background-color: #00bfff;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #009acd;
+}
+
+/* --- Footer --- */
 footer {
   text-align: center;
-  padding: 20px 0;
+  padding: 24px 10px;
   background: #09102b;
   color: #9aa7bb;
   margin-top: 50px;
   font-size: 14px;
+  border-top: 1px solid #1c2541;
+}
+
+footer a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* =========================
